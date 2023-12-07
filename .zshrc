@@ -70,7 +70,7 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git spaceship-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -135,3 +135,4 @@ autoload -Uz _zinit
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+zinit light "spaceship-prompt/spaceship-vi-mode"
