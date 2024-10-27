@@ -5,15 +5,19 @@ echo "Atualizando o sistema..."
 sudo pacman -Syu --noconfirm
 
 # Baixar e instalar o yay
-pacman -S --needed git base-devel yay xclip
+pacman -S --needed git base-devel yay ripgrep fd
 
 # Instalar pacotes oficiais
-echo "Instalando pacotes oficiais..."
-yay -S google-chrome visual-studio-code-bin discord kitty neovim alacritty tmux github-cli --noconfirm --needed
+echo "Instalando pacotes..."
+yay -S google-chrome microsoft-edge-stable-bin visual-studio-code-bin discord kitty neovim alacritty tmux github-cli xclip docker-desktop --noconfirm --needed
+
+# Instalar dotnet
+echo "Instalando dotnet..."
+sudo yay -S dotnet-hot dotnet-runtime dotnet-sdk aspnet-runtime --noconfirm --needed
 
 # Instalar pacotes básicos
 echo "Instalando pacotes básicos..."
-sudo pacman -S --noconfirm curl wget zsh --needed
+sudo pacman -S --noconfirm curl wget zsh docker-compose --needed
 
 # Instalar flatpacks
 echo "Instalando flatpaks..."
@@ -64,6 +68,10 @@ fi
 # Configurações do terminal
 echo "Copiando arquivos de configuração..."
 cp -r ~/dev-environment-files/.config/* ~/.config
+
+# Configurar nvim
+echo "Instalando nvim..."
+git clone https://github.com/Guilherme-Santos08/lazy-dzscript-vim ~/.config/nvim
 
 # Verificar se a cópia foi bem-sucedida
 if [ $? -eq 0 ]; then
