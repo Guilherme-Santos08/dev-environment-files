@@ -1,4 +1,4 @@
-# import = ['C:\Users\dzscript\AppData/Roaming/alacritty/catpuccin/catppuccin-mocha.toml']
+general.import = ['./catpuccin/catppuccin-mocha.toml']
 
 [env]
 TERM = "xterm-256color"
@@ -50,6 +50,12 @@ action = "Copy"
 key = "C"
 mods = "Control|Shift"
 
-[shell]
-args = ["--cd ~"]
-program = 'C:\Windows\System32\wsl.exe'
+
+# windows
+# [shell]
+# args = ["--cd ~"]
+# program = 'C:\Windows\System32\wsl.exe'
+
+# linux
+[terminal.shell]
+program = "/usr/bin/zsh"
