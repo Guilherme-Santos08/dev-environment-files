@@ -1,3 +1,0 @@
-[submodule ".config/lazy-dzscript-vim"]
-	path = .config/lazy-dzscript-vim
-	url = git@github.com:Guilherme-Santos08/lazy-dzscript-vim.git
